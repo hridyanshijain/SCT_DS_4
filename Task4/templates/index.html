@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Traffic Accident Analysis</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header class="header">
+<h1>Traffic Accident Data Analysis</h1>
+</header>
+
+<main class="container">
+    <section class="analysis-section">
+        <h2>Analysis Summary</h2>
+        <p>
+            This report provides a visual analysis of traffic accident data, highlighting key patterns
+            related to time of day, weather conditions, and road conditions. The visualizations below
+            reveal the most common contributing factors to traffic incidents.
+        </p>
+    </section>
+
+    <section class="analysis-section">
+        <h2>Accidents by Time of Day</h2>
+        <p>
+            This chart shows the distribution of accidents throughout the day. Analyzing this data
+            can help in identifying peak accident times and implementing targeted safety measures.
+        </p>
+        <img src="{{ url_for('static', filename='accidents_by_time.png') }}" alt="Chart showing accidents by time of day">
+    </section>
+
+    <section class="analysis-section">
+        <h2>Accidents by Weather Conditions</h2>
+        <p>
+            The weather plays a significant role in road safety. This visualization breaks down accidents
+            by different weather conditions, such as rain, snow, and clear skies, to understand their impact.
+        </p>
+        <img src="{{ url_for('static', filename='accidents_by_weather.png') }}" alt="Chart showing accidents by weather conditions">
+    </section>
+
+    <section class="analysis-section">
+        <h2>Accidents by Road Conditions</h2>
+        <p>
+            Road conditions like wet, dry, or icy surfaces are major factors in accidents. This chart
+            illustrates the frequency of accidents for each type of road condition.
+        </p>
+        <img src="{{ url_for('static', filename='accidents_by_road.png') }}" alt="Chart showing accidents by road conditions">
+    </section>
+</main>
+
+<footer class="footer">
+    <p>&copy; 2024 Traffic Analysis Dashboard</p>
+</footer>
+
+</body>
+</html>
